@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Netflix rating:</strong>
+  <%= @tvshow.netflix_rating %>
+</p>
+
+<p>
+  <strong>Imdb rating:</strong>
+  <%= @tvshow.imdb_rating %>
+</p>
+
+<%= link_to 'Edit', edit_tvshow_path(@tvshow) %> |
+<%= link_to 'Back', tvshows_path %>

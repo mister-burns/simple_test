@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lable:</strong>
+  <%= @show_list.lable %>
+</p>
+
+<p>
+  <strong>Number of episodes:</strong>
+  <%= @show_list.number_of_episodes %>
+</p>
+
+<p>
+  <strong>Number of seasons:</strong>
+  <%= @show_list.number_of_seasons %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @show_list.release_date %>
+</p>
+
+<p>
+  <strong>Wiki page:</strong>
+  <%= @show_list.wiki_page_id %>
+</p>
+
+<p>
+  <strong>Wiki page revision:</strong>
+  <%= @show_list.wiki_page_revision_id %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @show_list.language %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @show_list.country %>
+</p>
+
+<p>
+  <strong>Network:</strong>
+  <%= @show_list.network %>
+</p>
+
+<p>
+  <strong>Format:</strong>
+  <%= @show_list.format %>
+</p>
+
+<%= link_to 'Edit', edit_show_list_path(@show_list) %> |
+<%= link_to 'Back', show_lists_path %>

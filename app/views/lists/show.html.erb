@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Govt:</strong>
+  <%= @list.govt_id %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @list.position %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @list.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @list.end_date %>
+</p>
+
+<p>
+  <strong>Position title:</strong>
+  <%= @list.position_title %>
+</p>
+
+<p>
+  <strong>Organization name:</strong>
+  <%= @list.organization_name %>
+</p>
+
+<p>
+  <strong>Rate interval code:</strong>
+  <%= @list.rate_interval_code %>
+</p>
+
+<p>
+  <strong>Minimum:</strong>
+  <%= @list.minimum %>
+</p>
+
+<p>
+  <strong>Maximum:</strong>
+  <%= @list.maximum %>
+</p>
+
+<p>
+  <strong>Locations:</strong>
+  <%= @list.locations %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @list.url %>
+</p>
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>

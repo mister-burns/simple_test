@@ -1,0 +1,26 @@
+<p><% @hash.each do |h| %></p>
+	<% job = Job.new %>
+	<% job.govt_id = h["id"] %>
+	<% job.position_title = h["position_title"] %>
+	<% job.organization_name = h["organization_name"] %>
+	<% job.rate_interval_code = h["rate_interval_code"] %>
+	<% job.minimum = h["minimum"].to_i %>
+	<% job.maximum = h["maximum"].to_i %>
+	<% job.start_date = h["start_date"] %>
+	<% job.end_date = h["end_date"] %>
+	<% job.locations = h["locations"].first %>
+	<% job.url = h["url"] %>
+	<% job.save %>
+<% end %>
+
+<% job = Job.last %>
+<p><%= job.govt_id %></p>
+<p><%= job.position_title %></p>
+<p><%= job.organization_name %></p>
+<p><%= job.rate_interval_code %></p>
+<p><%= job.minimum %></p>
+<p><%= job.maximum %></p>
+<p><%= job.start_date %></p>
+<p><%= job.end_date %></p>
+<p><%= job.locations %></p>
+<p><%= job.url %></p>

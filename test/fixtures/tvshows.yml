@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  netflix_rating: 1.5
+  imdb_rating: 1.5
+
+two:
+  netflix_rating: 1.5
+  imdb_rating: 1.5

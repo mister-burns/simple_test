@@ -1,0 +1,45 @@
+<h1>TVRatr</h1>
+<% get_data %>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Show Name</th>
+      <th>Number of episodes</th>
+      <th>Number of seasons</th>
+      <th>Release date</th>
+      <th>Wiki page</th>
+      <th>Wiki page revision</th>
+      <th>Language</th>
+      <th>Country</th>
+      <th>Network</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @show_lists.each do |show_list| %>
+      <tr>
+        <td><%= show_list.id %></td>
+        <td><%= show_list.lable %></td>
+        <td><%= show_list.number_of_episodes %></td>
+        <td><%= show_list.number_of_seasons %></td>
+        <td><%= show_list.release_date.strftime("%B %-d, %Y") %></td>
+        <td><%= show_list.wiki_page_id %></td>
+        <td><%= show_list.wiki_page_revision_id %></td>
+        <td><%= show_list.language %></td>
+        <td><%= show_list.country %></td>
+        <td><%= show_list.network %></td>
+        <td><%= link_to 'Show', show_list %></td>
+        <td><%= link_to 'Edit', edit_show_list_path(show_list) %></td>
+        <td><%= link_to 'Destroy', show_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Show list', new_show_list_path %>

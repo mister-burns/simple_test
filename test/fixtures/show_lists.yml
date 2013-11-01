@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lable: MyString
+  number_of_episodes: 1
+  number_of_seasons: 1
+  release_date: 2013-10-30 22:39:26
+  wiki_page_id: 1
+  wiki_page_revision_id: 1
+  language: MyString
+  country: MyString
+  network: MyString
+  format: MyString
+
+two:
+  lable: MyString
+  number_of_episodes: 1
+  number_of_seasons: 1
+  release_date: 2013-10-30 22:39:26
+  wiki_page_id: 1
+  wiki_page_revision_id: 1
+  language: MyString
+  country: MyString
+  network: MyString
+  format: MyString

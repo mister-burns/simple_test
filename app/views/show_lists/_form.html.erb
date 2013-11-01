@@ -1,0 +1,57 @@
+<%= form_for(@show_list) do |f| %>
+  <% if @show_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@show_list.errors.count, "error") %> prohibited this show_list from being saved:</h2>
+
+      <ul>
+      <% @show_list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lable %><br>
+    <%= f.text_field :lable %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_episodes %><br>
+    <%= f.number_field :number_of_episodes %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_seasons %><br>
+    <%= f.number_field :number_of_seasons %>
+  </div>
+  <div class="field">
+    <%= f.label :release_date %><br>
+    <%= f.datetime_select :release_date %>
+  </div>
+  <div class="field">
+    <%= f.label :wiki_page_id %><br>
+    <%= f.number_field :wiki_page_id %>
+  </div>
+  <div class="field">
+    <%= f.label :wiki_page_revision_id %><br>
+    <%= f.number_field :wiki_page_revision_id %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br>
+    <%= f.text_field :language %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :network %><br>
+    <%= f.text_field :network %>
+  </div>
+  <div class="field">
+    <%= f.label :format %><br>
+    <%= f.text_field :format %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

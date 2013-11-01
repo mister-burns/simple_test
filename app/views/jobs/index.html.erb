@@ -1,0 +1,67 @@
+<p><%= @hash.class %></p>
+<p><%= @hash.first %></p>
+<%= @hash.first["id"] %><br>
+<%= @hash.first["position_title"] %><br>
+<%= @hash.first["organization_name"] %><br>
+<%= @hash.first["rate_interval_code"] %><br>
+<%= @hash.first["minimum"] %><br>
+<%= @hash.first["maximum"].to_i %><br>
+<%= @hash.first["start_date"].to_date %><br>
+<%= @hash.first["end_date"].to_date %><br>
+<%= @hash.first["locations"].first %><br>
+<%= @hash.first["url"] %><br>
+<br>
+
+<% @hash.first.each_key do |k| %>
+	<%= k.titlecase %><br>
+<% end %><br>
+
+<% @hash.first.each_value do |v| %>
+	<%= v %><br>
+<% end %><br>
+
+<% @hash.each do |e| %>
+	<% e.each_value do |v| %>
+		<%= v %><br>
+	<% end %><br>
+<% end %><br>
+
+
+The size of the hash is <%= @hash.first.size %><br>
+
+<p>1 <%= @hash.first.keys.inspect %></p>
+<p>2 <%= @hash.first.values.inspect %></p>
+<p>3 <%= @hash.first.keys %></p>
+<p>4 <%= @hash.first.eql? @hash2.first %></p>
+<p>5 <%= @hash.first.empty? %></p>
+<p>6 <%= @hash.first.has_key? "position_title" %></p>
+<p>7 <%= @hash.first.include? "organization_name" %></p>
+<p>8 <%= @hash.first.include? "pay_range" %></p>
+<p>9 <%= @hash.first.key? "position_title" %></p>
+<p>10 <%= @hash.first.has_value? "Nurse" %></p>
+<p>11 <%= @hash.first.fetch "id" %></p>
+<p>12 <%= @hash.first.values_at "id","position_title","organization_name" %></p>
+
+<% @hash.each do |hash| %>
+	<%= hash["id"] %><br>
+	<%= hash["position_title"] %><br>
+	<%= hash["organization_name"] %><br>
+	<%= hash["rate_interval_code"] %><br>
+	<%= hash["minimum"] %><br>
+	<%= hash["maximum"] %><br>
+	<%= hash["start_date"] %><br>
+	<% if hash["end_date"] != nil %>
+		<%= hash["end_date"].to_date %><br>
+	<% else %> 
+		<%= hash["end_date"].to_s %>
+	<% end %>
+	<%= hash["locations"] %><br>
+	<%= link_to("Job Link", hash["url"]) %><br><br>
+<% end %>
+
+<%= @dog %><br>
+<% if @dog = 34 %>
+	<%= "chicken" %><br>
+<% else %> 
+	<%= "lobster" %>
+<% end %>

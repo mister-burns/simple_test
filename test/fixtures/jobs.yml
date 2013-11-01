@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  govt_id: MyString
+  position: MyString
+  start_date: 2013-10-24 16:15:11
+
+two:
+  govt_id: MyString
+  position: MyString
+  start_date: 2013-10-24 16:15:11

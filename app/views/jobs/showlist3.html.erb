@@ -1,0 +1,6 @@
+<h1>TV Show List2 in JSON:</h1>
+<% @hash2.each do |h| %>
+	<p><%= h["wikiPageID"]["value"].to_i %><br>
+	<%= h["label"]["value"] %><br>
+	<%= h["numberOfEpisodes"]["value"] %></p>
+<% end %>

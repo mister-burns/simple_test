@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  govt_id: MyString
+  position: MyString
+  start_date: 2013-10-30 16:33:10
+  end_date: 2013-10-30 16:33:10
+  position_title: MyString
+  organization_name: MyString
+  rate_interval_code: MyString
+  minimum: 1
+  maximum: 1
+  locations: MyString
+  url: MyString
+
+two:
+  govt_id: MyString
+  position: MyString
+  start_date: 2013-10-30 16:33:10
+  end_date: 2013-10-30 16:33:10
+  position_title: MyString
+  organization_name: MyString
+  rate_interval_code: MyString
+  minimum: 1
+  maximum: 1
+  locations: MyString
+  url: MyString

@@ -1,0 +1,32 @@
+<h1>Listing tvshows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Netflix rating</th>
+      <th>Imdb rating</th>
+      <th>Long Title</th>
+      <th>Average Rating</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tvshows.each do |tvshow| %>
+      <tr>
+        <td><%= tvshow.netflix_rating %></td>
+        <td><%= tvshow.imdb_rating %></td>
+        <td><%= tvshow.long_title %></td>
+        <td><%= tvshow.average_rating %></td>
+        <td><%= link_to 'Show', tvshow %></td>
+        <td><%= link_to 'Edit', edit_tvshow_path(tvshow) %></td>
+        <td><%= link_to 'Destroy', tvshow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tvshow', new_tvshow_path %>
